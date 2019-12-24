@@ -9,19 +9,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Rahats App'),
+        title: Text('Hello Rahat'),
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Center(
-        child: Image(
-            image: AssetImage('assets/img/center_1.jpg')
-            // for Network image
-//            image: NetworkImage('https://images.unsplash.com/photo-1577175825592-199971058239?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80'),
-        ),
+      body: Container(
+        color: Colors.amber ,
+        child: Text('This is a text'),
+        padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 50.0),
+        margin: EdgeInsets.all(20),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Text('Click'),
+        child: Icon(
+          Icons.add_a_photo,
+          color: Colors.black,
+          size: 30,
+        ),
         onPressed: null,
         backgroundColor: Colors.red[600],
       ),
