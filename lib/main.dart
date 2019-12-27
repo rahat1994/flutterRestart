@@ -14,22 +14,36 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          Text('data'),
-          FlatButton(
-            child: Text('Hello'),
-            onPressed: (){},
-            color: Colors.amber,
+          Expanded(
+            flex: 3,
+            child: Image.asset('/assets/img/center_1.jpg')
           ),
-          Container(
-            color: Colors.cyan,
-            padding: EdgeInsets.all(30.0),
-            child: Text('data'),
-          )
+          Expanded(
+            flex: 2,
+            child: Container(
+              color: Colors.cyan,
+              padding: EdgeInsets.all(10.0),
+              child: Text('data 1')
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              color: Colors.pink,
+              padding: EdgeInsets.all(10.0),
+              child: Text('data 2')
+            ),
+          ),
+          Expanded(
+            child: Container(
+              color: Colors.amber,
+              padding: EdgeInsets.all(10.0),
+              child: Text('data 3')
+            ),
+          ),
         ],
-      ),
+      ), 
       floatingActionButton: FloatingActionButton(
         child: Icon(
           Icons.add_a_photo,
