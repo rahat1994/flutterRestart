@@ -13,11 +13,22 @@ class MyApp extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Container(
-        color: Colors.amber ,
-        child: Text('This is a text'),
-        padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 50.0),
-        margin: EdgeInsets.all(20),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          Text('data'),
+          FlatButton(
+            child: Text('Hello'),
+            onPressed: (){},
+            color: Colors.amber,
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(30.0),
+            child: Text('data'),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(
